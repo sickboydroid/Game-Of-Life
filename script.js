@@ -3,7 +3,7 @@ const btnStartStop = document.querySelector("#start-stop");
 const btnClear = document.querySelector("#clear");
 const rangeSpeed = document.querySelector("#speed-range");
 const labelSpeed = document.querySelector("#speed-label");
-const CELL_SIZE_PIXELS = 30;
+const CELL_SIZE_PIXELS = 15;
 const ALIVE_CELL_COLOR = "black";
 const DEAD_CELL_COLOR = "white";
 
