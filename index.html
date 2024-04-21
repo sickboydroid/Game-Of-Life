@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game Of Life</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="tools-container">
+        <h2>Game of Life</h2>
+        <div class="speed-tool-container">
+          <div class="speed-labels-container">
+            <label for="speed">Speed:</label>
+            <label for="speed" id="speed-label">1x</label>
+          </div>
+          <input type="range" min="1" max="10" id="speed-range" value="1" />
+        </div>
+        <div class="tools-button-container">
+          <button id="clear">Clear</button>
+
+          <button id="start-stop">Start</button>
+        </div>
+        <div class="presets-container">
+          <ul id="presets"></ul>
+        </div>
+      </div>
+      <div class="grid" id="game-grid"></div>
+    </div>
+  </body>
+</html>
