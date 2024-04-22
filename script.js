@@ -15,10 +15,7 @@ let COLS;
 
 resetGameGrid();
 gameGrid.addEventListener("mouseleave", () => (isDrag = false));
-rangeSpeed.addEventListener(
-  "input",
-  () => (labelSpeed.textContent = rangeSpeed.value + "x")
-);
+rangeSpeed.addEventListener("input", () => (labelSpeed.textContent = rangeSpeed.value + "x"));
 btnClear.addEventListener("click", () => resetGameGrid());
 btnStartStop.addEventListener("click", function () {
   play = !play;
@@ -53,15 +50,10 @@ function nextGeneration() {
 
 function getAliveNeighbors(r, c) {
   let count = 0;
+  // prettier-ignore
   const dirs = [
-    [1, 0],
-    [-1, 0],
-    [0, 1],
-    [0, -1],
-    [1, 1],
-    [1, -1],
-    [-1, 1],
-    [-1, -1],
+    [1, 0],[-1, 0], [0, 1], [0, -1],
+    [1, 1], [1, -1], [-1, 1], [-1, -1],
   ];
   for (const [dr, dc] of dirs) {
     const [nr, nc] = [r + dr, c + dc];
