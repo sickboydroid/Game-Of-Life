@@ -39,9 +39,9 @@ function nextGeneration() {
   const changes = [];
   for (let r = 0; r < ROWS; r++) {
     for (let c = 0; c < COLS; c++) {
-      const neighbours = getAliveNeighbours(r, c);
-      if ((neighbours < 2 || neighbours > 3) && isAlive(r, c)) changes.push([r, c]);
-      else if (neighbours === 3 && isDead(r, c)) changes.push([r, c]);
+      const neighbors = getAliveNeighbors(r, c);
+      if ((neighbors < 2 || neighbors > 3) && isAlive(r, c)) changes.push([r, c]);
+      else if (neighbors === 3 && isDead(r, c)) changes.push([r, c]);
     }
   }
 
@@ -51,7 +51,7 @@ function nextGeneration() {
   }
 }
 
-function getAliveNeighbours(r, c) {
+function getAliveNeighbors(r, c) {
   let count = 0;
   const dirs = [
     [1, 0],
